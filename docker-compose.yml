@@ -1,0 +1,36 @@
+name: welcome
+
+services:
+  backend:
+    container_name: welcome-backend
+    restart: unless-stopped
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    env_file:
+      - ./backend/.env
+    volumes:
+      - ./backend:/app/backend
+    networks:
+      - welcome
+    ports:
+      - 3001:3001
+
+  frontend:
+    container_name: welcome-frontend
+    restart: unless-stopped
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    volumes:
+      - ./frontend:/app/frontend
+    networks:
+      - welcome
+    ports:
+      - 3000:3000
+    depends_on:
+      - backend
+
+networks:
+  welcome:
+    driver: bridge

@@ -3,7 +3,7 @@
 import { PropsWithChildren } from "react";
 import { ThemeProvider as MUIThemeProvider } from "@mui/material";
 import CssBaseline from "@mui/material/CssBaseline";
-import theme from "../theme";
+import theme from "../../theme";
 
 const ThemeProvider = ({ children }: PropsWithChildren) => {
   return (

@@ -32,6 +32,7 @@ const Login = () => {
             <Input
               type="email"
               name="email"
+              autocomplete="email"
               label="Email Address"
               placeholder="Email Address"
               register={register as unknown as UseFormRegister<FieldValues>}
@@ -41,6 +42,7 @@ const Login = () => {
             <Input
               type="password"
               name="password"
+              autocomplete="current-password"
               label="Password"
               placeholder="Password"
               register={register as unknown as UseFormRegister<FieldValues>}

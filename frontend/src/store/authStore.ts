@@ -1,9 +1,9 @@
 import { create } from "zustand";
-import { IUserLogin } from "../types";
+import { IUserLogin, IUserRegister } from "../types";
 
 interface AuthState {
-  user: IUserLogin | null;
-  set: (user: IUserLogin) => void;
+  user: IUserLogin | IUserRegister | null;
+  set: (user: IUserLogin | IUserRegister) => void;
 }
 
 export const useAuthStore = create<AuthState>((set) => ({

@@ -14,6 +14,7 @@ import * as Styled from "./styles";
 
 interface IProps<T extends FieldValues> {
   name: Path<T>;
+  autocomplete: TextFieldProps["autoComplete"];
   placeholder: string;
   label: string;
   type: TextFieldProps["type"];
@@ -30,6 +31,7 @@ function Input<T extends FieldValues>({
   register,
   label,
   isShowIcon,
+  autocomplete,
 }: IProps<T>) {
   const [isShow, setIsShow] = useState(false);
 
@@ -43,6 +45,7 @@ function Input<T extends FieldValues>({
         type={isShowIcon ? (isShow ? "text" : "password") : type}
         placeholder={placeholder}
         error={!!error}
+        autoComplete={autocomplete}
         helperText={error}
         {...register(name)}
         slotProps={{

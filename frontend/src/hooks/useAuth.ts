@@ -7,12 +7,12 @@ import {
 } from "react-hook-form";
 import { AnyObjectSchema } from "yup";
 import { useAuthStore } from "../store/authStore";
-import { IUserLogin } from "../types";
+import { IUserLogin, IUserRegister } from "../types";
 
 interface IProps<T extends FieldValues> {
   validation: AnyObjectSchema;
   defaultValues: DefaultValues<T>;
-  isLogin: boolean;
+  isLogin?: boolean;
 }
 
 interface UseAuthReturnType<T extends FieldValues> {
@@ -24,7 +24,7 @@ interface UseAuthReturnType<T extends FieldValues> {
 function useAuth<T extends FieldValues>({
   validation,
   defaultValues,
-  isLogin,
+  isLogin = false,
 }: IProps<T>): UseAuthReturnType<T> {
   const {
     handleSubmit,
@@ -41,7 +41,7 @@ function useAuth<T extends FieldValues>({
     alert(isLogin ? "Login successful" : "Registration successful");
 
     // Save data to the store
-    setUser(data as unknown as IUserLogin);
+    setUser(data as unknown as IUserLogin | IUserRegister);
 
     // Clear all fields
     reset();

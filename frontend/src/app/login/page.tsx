@@ -1,7 +1,6 @@
 "use client";
 
 import { Box, Typography } from "@mui/material";
-import { FieldValues, UseFormRegister } from "react-hook-form";
 import { PATH } from "../../constants";
 import Link from "../../components/Link";
 import Input from "../../components/Input";
@@ -10,9 +9,10 @@ import useAuth from "../../hooks/useAuth";
 import { IUserLogin } from "../../types";
 import * as Styled from "./styles";
 import * as GlobalStyled from "../../styles";
+import { Control, FieldValues } from "react-hook-form";
 
 const Login = () => {
-  const { register, handleSubmit, errors } = useAuth<IUserLogin>({
+  const { control, handleSubmit, errors } = useAuth<IUserLogin>({
     validation,
     defaultValues,
     isLogin: true,
@@ -32,20 +32,20 @@ const Login = () => {
             <Input
               type="email"
               name="email"
-              autocomplete="email"
+              autoComplete="email"
               label="Email Address"
               placeholder="Email Address"
-              register={register as unknown as UseFormRegister<FieldValues>}
+              control={control as unknown as Control<FieldValues>}
               error={errors?.email?.message}
             />
 
             <Input
               type="password"
               name="password"
-              autocomplete="current-password"
+              autoComplete="current-password"
               label="Password"
               placeholder="Password"
-              register={register as unknown as UseFormRegister<FieldValues>}
+              control={control as unknown as Control<FieldValues>}
               error={errors?.password?.message}
               isShowIcon
             />

@@ -1,7 +1,6 @@
 "use client";
 
 import { Box, Typography } from "@mui/material";
-import { FieldValues, UseFormRegister } from "react-hook-form";
 import { PATH } from "../../constants";
 import Link from "../../components/Link";
 import Input from "../../components/Input";
@@ -10,9 +9,10 @@ import useAuth from "../../hooks/useAuth";
 import { IUserRegister } from "../../types";
 import * as Styled from "./styles";
 import * as GlobalStyled from "../../styles";
+import { Control, FieldValues } from "react-hook-form";
 
 const Register = () => {
-  const { register, handleSubmit, errors } = useAuth<
+  const { control, handleSubmit, errors } = useAuth<
     IUserRegister & { confirmPassword: string }
   >({
     validation,
@@ -35,30 +35,30 @@ const Register = () => {
             <Input
               type="text"
               name="firstName"
-              autocomplete="given-name"
+              autoComplete="given-name"
               label="First Name"
               placeholder="Enter your first name"
-              register={register as unknown as UseFormRegister<FieldValues>}
+              control={control as unknown as Control<FieldValues>}
               error={errors?.firstName?.message}
             />
 
             <Input
               type="text"
               name="lastName"
-              autocomplete="family-name"
+              autoComplete="family-name"
               label="Last Name"
               placeholder="Enter your last name"
-              register={register as unknown as UseFormRegister<FieldValues>}
+              control={control as unknown as Control<FieldValues>}
               error={errors?.lastName?.message}
             />
 
             <Input
               type="email"
               name="email"
-              autocomplete="email"
+              autoComplete="email"
               label="Email Address"
               placeholder="Email Address"
-              register={register as unknown as UseFormRegister<FieldValues>}
+              control={control as unknown as Control<FieldValues>}
               error={errors?.email?.message}
             />
 
@@ -66,10 +66,11 @@ const Register = () => {
               type="tel"
               name="phone"
               label="Phone Number"
-              autocomplete="email"
+              autoComplete="email"
               placeholder="Phone Number"
-              register={register as unknown as UseFormRegister<FieldValues>}
+              control={control as unknown as Control<FieldValues>}
               error={errors?.phone?.message}
+              isPhone
             />
 
             <Input
@@ -77,19 +78,19 @@ const Register = () => {
               name="password"
               label="Password"
               placeholder="Password"
-              autocomplete="new-password"
-              register={register as unknown as UseFormRegister<FieldValues>}
+              autoComplete="new-password"
+              control={control as unknown as Control<FieldValues>}
               error={errors?.password?.message}
               isShowIcon
             />
 
             <Input
               type="password"
-              autocomplete="new-password"
+              autoComplete="new-password"
               name="confirmPassword"
               label="Confirm Password"
               placeholder="Confirm Password"
-              register={register as unknown as UseFormRegister<FieldValues>}
+              control={control as unknown as Control<FieldValues>}
               error={errors?.confirmPassword?.message}
               isShowIcon
             />
@@ -102,6 +103,7 @@ const Register = () => {
           <Styled.LinkLabel variant="body1">
             Already have an account?
           </Styled.LinkLabel>
+
           <Link text="Log In" href={PATH.LOGIN} isLinkColor />
         </Styled.LinkWrapper>
       </Box>

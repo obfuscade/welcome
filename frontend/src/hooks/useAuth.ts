@@ -1,5 +1,6 @@
 import { yupResolver } from "@hookform/resolvers/yup";
 import {
+  Control,
   DefaultValues,
   FieldValues,
   useForm,
@@ -16,7 +17,7 @@ interface IProps<T extends FieldValues> {
 }
 
 interface UseAuthReturnType<T extends FieldValues> {
-  register: UseFormReturn<T>["register"];
+  control: Control<T>;
   handleSubmit: ReturnType<UseFormReturn<T>["handleSubmit"]>;
   errors: UseFormReturn<T>["formState"]["errors"];
 }
@@ -28,8 +29,8 @@ function useAuth<T extends FieldValues>({
 }: IProps<T>): UseAuthReturnType<T> {
   const {
     handleSubmit,
-    register,
     reset,
+    control,
     formState: { errors },
   } = useForm<T>({
     resolver: yupResolver(validation),
@@ -48,7 +49,7 @@ function useAuth<T extends FieldValues>({
   };
 
   return {
-    register,
+    control,
     handleSubmit: handleSubmit(handleSubmitAction),
     errors,
   };

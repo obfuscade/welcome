@@ -12,6 +12,9 @@ const palette: PaletteOptions = {
     primary: "#292929",
     secondary: "#667085",
   },
+  error: {
+    main: "#d32f2f",
+  },
 };
 
 export default palette;

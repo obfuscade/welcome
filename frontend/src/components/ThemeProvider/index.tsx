@@ -1,13 +1,19 @@
 "use client";
 
-import { PropsWithChildren } from "react";
+import { ReactNode } from "react";
 import { ThemeProvider as MUIThemeProvider } from "@mui/material";
+import { Direction } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
-import theme from "../../theme";
+import getTheme from "../../theme";
 
-const ThemeProvider = ({ children }: PropsWithChildren) => {
+interface IProps {
+  children: ReactNode;
+  direction: Direction;
+}
+
+const ThemeProvider = ({ children, direction }: IProps) => {
   return (
-    <MUIThemeProvider theme={theme}>
+    <MUIThemeProvider theme={getTheme(direction)}>
       <CssBaseline />
       {children}
     </MUIThemeProvider>

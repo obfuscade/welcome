@@ -15,7 +15,7 @@ const Link = ({ href, text, isLinkColor }: IProps) => {
       href={href}
       variant="text"
       fullWidth={false}
-      isLinkColor={isLinkColor}
+      islinkcolor={String(isLinkColor)}
     >
       {text}
     </Styled.Link>

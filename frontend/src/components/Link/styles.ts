@@ -4,10 +4,10 @@ import styled from "@emotion/styled";
 import { Button, ButtonProps } from "@mui/material";
 
 interface LinkProps extends ButtonProps {
-  isLinkColor?: boolean;
+  islinkcolor?: string;
 }
 
-export const Link = styled(Button)<LinkProps>(({ isLinkColor }) => ({
-  fontWeight: isLinkColor ? 600 : 500,
-  color: isLinkColor ? "var(--general-link-color)" : "inherit",
+export const Link = styled(Button)<LinkProps>(({ islinkcolor }) => ({
+  fontWeight: islinkcolor === "true" ? 600 : 500,
+  color: islinkcolor === "true" ? "var(--general-link-color)" : "inherit",
 }));

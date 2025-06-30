@@ -51,7 +51,7 @@ function Input({
         render={({ field, fieldState }) =>
           isPhone ? (
             <FormControl fullWidth error={!!error}>
-              <Styled.PhoneInputWrapper isError={!!fieldState.error}>
+              <Styled.PhoneInputWrapper iserror={String(!!fieldState.error)}>
                 <Styled.PhoneInput
                   country={DEFAULT_COUNTRY}
                   value={field.value || ""}

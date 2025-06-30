@@ -1,0 +1,52 @@
+{
+  "Footer": {
+    "text": "© 2025 טרידיס. כל הזכויות שמורות."
+  },
+  "Login": {
+    "title": "התחברות",
+    "subtitle": "ברוך הבא! התחבר כדי להמשיך",
+    "inputs": {
+      "email": "כתובת אימייל",
+      "password": "סיסמה"
+    },
+    "validation": {
+      "invalidEmail": "אימייל לא חוקי",
+      "requiredEmail": "אימייל הוא שדה חובה",
+      "requiredPassword": "סיסמה היא שדה חובה"
+    },
+    "button": "התחבר",
+    "forgot": "שכחת סיסמה?",
+    "create": "צור חשבון חדש"
+  },
+  "Register": {
+    "title": "הרשמה",
+    "subtitle": "צור את החשבון שלך כדי להתחיל.",
+    "inputs": {
+      "firstName": "שם פרטי",
+      "lastName": "שם משפחה",
+      "phone": "מספר טלפון",
+      "email": "כתובת אימייל",
+      "password": "סיסמה",
+      "confirmPassword": "אישור סיסמה"
+    },
+    "validation": {
+      "invalidEmail": "אימייל לא חוקי",
+      "requiredEmail": "אימייל הוא שדה חובה",
+      "requiredPassword": "סיסמה היא שדה חובה",
+      "passwordRequirements": "הסיסמה חייבת להכיל לפחות 8 תווים באנגלית, עם אות גדולה, אות קטנה וספרה אחת",
+      "passwordsDoNotMatch": "הסיסמאות אינן תואמות",
+      "requiredConfirmPassword": "אישור הסיסמה הוא שדה חובה",
+      "requiredPhoneNumber": "מספר טלפון הוא שדה חובה",
+      "phoneNumberInvalid": "מספר טלפון לא חוקי",
+      "requiredFirstName": "שם פרטי הוא שדה חובה",
+      "onlyLettersFirstName": "השם הפרטי חייב להכיל רק אותיות",
+      "requiredLastName": "שם משפחה הוא שדה חובה",
+      "onlyLettersLastName": "שם המשפחה חייב להכיל רק אותיות",
+      "minName": "אורך מינימלי הוא 2 תווים",
+      "maxName": "אורך מקסימלי הוא 30 תווים"
+    },
+    "button": "הרשם",
+    "exists": "כבר יש לך חשבון?",
+    "link": "התחבר"
+  }
+}

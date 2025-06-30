@@ -12,28 +12,30 @@ export const Wrapper = styled(Box)({
 });
 
 export const PhoneInputWrapper = styled(Box)<{
-  isError?: boolean;
+  iserror?: string;
   theme?: Theme;
-}>(({ theme, isError }) => ({
+}>(({ theme, iserror }) => ({
   display: "flex",
   width: "100%",
   border: `0.0625rem solid ${
-    isError ? theme.palette.error.main : "rgba(0, 0, 0, 0.23)"
+    iserror === "true" ? theme.palette.error.main : "rgba(0, 0, 0, 0.23)"
   }`,
   borderRadius: "var(--general-border-radius)",
 
   "&:hover": {
-    borderColor: isError
-      ? theme.palette.error.main
-      : theme.palette.secondary.main,
+    borderColor:
+      iserror === "true"
+        ? theme.palette.error.main
+        : theme.palette.secondary.main,
   },
 
   "&:focus-within, &:has(.open)": {
-    borderColor: isError
-      ? theme.palette.error.main
-      : theme.palette.primary.main,
+    borderColor:
+      iserror === "true"
+        ? theme.palette.error.main
+        : theme.palette.primary.main,
     boxShadow: `0 0 0 1px ${
-      isError ? theme.palette.error.main : theme.palette.primary.main
+      iserror === "true" ? theme.palette.error.main : theme.palette.primary.main
     }`,
   },
 

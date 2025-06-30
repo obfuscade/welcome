@@ -1,0 +1,52 @@
+{
+  "Footer": {
+    "text": "© 2025 Treedis. All right reserved."
+  },
+  "Login": {
+    "title": "Log in",
+    "subtitle": "Welcome! Login to continue",
+    "inputs": {
+      "email": "Email Address",
+      "password": "Password"
+    },
+    "validation": {
+      "invalidEmail": "Invalid Email",
+      "requiredEmail": "Email is required",
+      "requiredPassword": "Password is required"
+    },
+    "button": "Log In",
+    "forgot": "Forgot Password?",
+    "create": "Create New Account"
+  },
+  "Register": {
+    "title": "Sign up",
+    "subtitle": "Create your account to get started.",
+    "inputs": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "phone": "Phone Number",
+      "email": "Email Address",
+      "password": "Password",
+      "confirmPassword": "Confirm Password"
+    },
+    "validation": {
+      "invalidEmail": "Invalid email",
+      "requiredEmail": "Email is required",
+      "requiredPassword": "Password is required",
+      "passwordRequirements": "Password must be at least 8 english characters, and contain 1 uppercase, 1 lowercase and 1 digit",
+      "passwordsDoNotMatch": "Passwords do not match",
+      "requiredConfirmPassword": "Confirm password is required",
+      "requiredPhoneNumber": "Phone number is required",
+      "phoneNumberInvalid": "Phone number is invalid",
+      "requiredFirstName": "First name is required",
+      "onlyLettersFirstName": "First name must contain only letters",
+      "requiredLastName": "Last name is required",
+      "onlyLettersLastName": "Last name must contain only letters",
+      "minName": "Minimum length is 2",
+      "maxName": "Maximum length is 2"
+    },
+    "button": "Sign Up",
+    "exists": "Already have an account?",
+    "link": "Log In"
+  }
+}

@@ -18,7 +18,7 @@ const Header = () => {
   }, [pathname]);
 
   return (
-    <Styled.Header>
+    <Styled.Header component="header">
       <Image src="/logo.svg" width={157} height={50} alt="Logo image" />
 
       <Styled.LinksWrapper>

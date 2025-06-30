@@ -2,12 +2,12 @@ import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
 import type { Metadata } from "next";
 import { ReactNode } from "react";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
+import { getLangDir } from "rtl-detect";
 import { notFound } from "next/navigation";
 import { Inter } from "next/font/google";
 import Root from "../../components/Root";
 import ThemeProvider from "../../components/ThemeProvider";
 import { routing } from "../../libs/i18n/routing";
-import { getLangDir } from "rtl-detect";
 
 export const metadata: Metadata = {
   title: "Welcome",

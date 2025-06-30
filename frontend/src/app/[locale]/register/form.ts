@@ -17,7 +17,10 @@ export const defaultValues: IUserRegister & { confirmPassword: string } = {
   confirmPassword: "",
 };
 
-export const validation = (t: (key: string) => string) => {
+export const validation = (
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  t: (key: string, params?: Record<string, any>) => string,
+) => {
   return object().shape({
     email: string()
       .email(t("validation.invalidEmail"))
@@ -34,12 +37,12 @@ export const validation = (t: (key: string) => string) => {
     firstName: string()
       .required(t("validation.requiredFirstName"))
       .matches(REGEXP_NAME, t("validation.onlyLettersFirstName"))
-      .min(MIN_NAME_LETTER, t("validation.minName"))
-      .max(MAX_NAME_LETTER, t("validation.maxName")),
+      .min(MIN_NAME_LETTER, t("validation.minName", { len: MIN_NAME_LETTER }))
+      .max(MAX_NAME_LETTER, t("validation.maxName", { len: MAX_NAME_LETTER })),
     lastName: string()
       .required(t("validation.requiredLastName"))
       .matches(REGEXP_NAME, t("validation.onlyLettersLastName"))
-      .min(MIN_NAME_LETTER, t("validation.minName"))
-      .max(MAX_NAME_LETTER, t("validation.maxName")),
+      .min(MIN_NAME_LETTER, t("validation.minName", { len: MIN_NAME_LETTER }))
+      .max(MAX_NAME_LETTER, t("validation.maxName", { len: MAX_NAME_LETTER })),
   });
 };

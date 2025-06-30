@@ -42,8 +42,8 @@
       "onlyLettersFirstName": "First name must contain only letters",
       "requiredLastName": "Last name is required",
       "onlyLettersLastName": "Last name must contain only letters",
-      "minName": "Minimum length is 2",
-      "maxName": "Maximum length is 2"
+      "minName": "Minimum length is {len}",
+      "maxName": "Maximum length is {len}"
     },
     "button": "Sign Up",
     "exists": "Already have an account?",

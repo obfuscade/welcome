@@ -5,8 +5,8 @@ import { usePathname } from "next/navigation";
 import Header from "../Header";
 import Footer from "../Footer";
 import Aside from "../Aside";
-import * as Styled from "./styles";
 import { PATH } from "../../constants";
+import * as Styled from "./styles";
 
 const Root = ({ children }: PropsWithChildren) => {
   const pathname = usePathname();

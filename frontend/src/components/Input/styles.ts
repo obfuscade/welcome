@@ -34,7 +34,7 @@ export const PhoneInputWrapper = styled(Box)<{
       iserror === "true"
         ? theme.palette.error.main
         : theme.palette.primary.main,
-    boxShadow: `0 0 0 1px ${
+    boxShadow: `0 0 0 0.0625rem ${
       iserror === "true" ? theme.palette.error.main : theme.palette.primary.main
     }`,
   },

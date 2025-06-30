@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
-import * as Styled from "./styles";
 import { useTranslations } from "next-intl";
+import * as Styled from "./styles";
 
 const Footer = () => {
   const t = useTranslations("Footer");

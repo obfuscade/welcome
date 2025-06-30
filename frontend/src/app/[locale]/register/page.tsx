@@ -1,6 +1,8 @@
 "use client";
 
 import { Box, Typography } from "@mui/material";
+import { useLocale, useTranslations } from "next-intl";
+import { Control, FieldValues } from "react-hook-form";
 import { PATH } from "../../../constants";
 import Link from "../../../components/Link";
 import Input from "../../../components/Input";
@@ -9,8 +11,6 @@ import useAuth from "../../../hooks/useAuth";
 import { IUserRegister } from "../../../types";
 import * as Styled from "./styles";
 import * as GlobalStyled from "../../../styles";
-import { Control, FieldValues } from "react-hook-form";
-import { useLocale, useTranslations } from "next-intl";
 
 const Register = () => {
   const t = useTranslations("Register");

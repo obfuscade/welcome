@@ -3,9 +3,9 @@
 import styled from "@emotion/styled";
 import { Box, Theme, Button as MUIButton, Typography } from "@mui/material";
 
-export const Button = styled(MUIButton)(({ theme }: { theme?: Theme }) => ({
+export const Button = styled(MUIButton)<{ theme?: Theme }>(({ theme }) => ({
   "&:hover": {
-    backgroundColor: theme?.palette.primary.main,
+    backgroundColor: theme.palette.primary.main,
   },
 }));
 

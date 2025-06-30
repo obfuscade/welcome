@@ -1,10 +1,10 @@
 "use client";
 
 import styled from "@emotion/styled";
-import { Box } from "@mui/material";
+import { Box, BoxProps } from "@mui/material";
 import NextLink from "next/link";
 
-export const Header = styled.header({
+export const Header = styled(Box)<BoxProps>({
   display: "flex",
   alignItems: "center",
   justifyContent: "space-between",
